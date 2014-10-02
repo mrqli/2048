@@ -71,6 +71,7 @@ function updateBoardView(){
 			else{
 				theNumberCell.css('width',cellSideLength);
 				theNumberCell.css('height',cellSideLength);
+				theNumberCell.css('border-radius',0.02 * cellSideLength);
 				theNumberCell.css('top',getPosTop(i,j));
 				theNumberCell.css('left',getPosLeft(i,j));	
 				theNumberCell.css('background-color',getNumberBackgroundColor(board[i][j]));

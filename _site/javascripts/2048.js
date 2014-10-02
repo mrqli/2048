@@ -71,6 +71,7 @@ function updateBoardView(){
 			else{
 				theNumberCell.css('width',cellSideLength);
 				theNumberCell.css('height',cellSideLength);
+				theNumberCell.css('border-radius',0.02 * cellSideLength);
 				theNumberCell.css('top',getPosTop(i,j));
 				theNumberCell.css('left',getPosLeft(i,j));	
 				theNumberCell.css('background-color',getNumberBackgroundColor(board[i][j]));
@@ -293,9 +294,11 @@ document.addEventListener('touchstart',function(event){
 	startx = event.touches[0].pageX;
 	starty = event.touches[0].pageY;
 });
+/*
 document.addEventListener('touchmove',function(event){
 	event.preventDefault();
 });
+*/
 document.addEventListener('touchend',function(event){
 	endx = event.changedTouches[0].pageX;
 	endy = event.changedTouches[0].pageY;
