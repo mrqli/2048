@@ -12,11 +12,16 @@ $(document).ready(function(){
 	newGame();
 });
 function prepareForMobile(){
-	if(documentWidth>500){
-		gridContainerWidth = 500;
-		cellSpace = 20;
-		cellSideLength = 100;
-	}
+
+	if(documentHeight<650){
+		if(documentWidth>500){
+			gridContainerWidth = 500;
+			cellSpace = 20;
+			cellSideLength = 100;
+		}
+		$('header,p1,h,a').css('margin','0 auto');
+		$('#grid-container').css('margin','0 auto');
+	}	
 	$('#grid-container').css('width',gridContainerWidth - 2*cellSpace);
 	$('#grid-container').css('height',gridContainerWidth - 2*cellSpace);
 	$('#grid-container').css('padding',cellSpace);
