@@ -13,12 +13,12 @@ $(document).ready(function(){
 });
 function prepareForMobile(){
 
+	if(documentWidth>500){
+		gridContainerWidth = 500;
+		cellSpace = 20;
+		cellSideLength = 100;
+	}
 	if(documentHeight<650){
-		if(documentWidth>500){
-			gridContainerWidth = 500;
-			cellSpace = 20;
-			cellSideLength = 100;
-		}
 		$('header,p1,h,a').css('margin','0 auto');
 		$('#grid-container').css('margin','0 auto');
 	}	
@@ -293,8 +293,11 @@ document.addEventListener('touchstart',function(event){
 	startx = event.touches[0].pageX;
 	starty = event.touches[0].pageY;
 });
-
-
+/*
+document.addEventListener('touchmove',function(event){
+	event.preventDefault();
+});
+*/
 document.addEventListener('touchend',function(event){
 	endx = event.changedTouches[0].pageX;
 	endy = event.changedTouches[0].pageY;
